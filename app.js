@@ -18,7 +18,12 @@ app.set("layout", "./layouts/main");
 app.set("view engine", "ejs");
 
 app.get("/", function (req, res) {
-  res.render("index");
+  const locals = {
+    title: "NoteJS",
+    description: "Node Js Notes App",
+  };
+
+  res.render("index", locals);
 });
 
 app.listen(port, () => {
