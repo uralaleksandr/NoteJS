@@ -1,11 +1,23 @@
 /**
- * Get Homepage
+ * GET /
+ * Homepage
  */
 exports.homepage = async (req, res) => {
   const locals = {
-    title: "NodeJS Notes",
-    description: "NodejS Noting App",
+    title: "NodeJs Notes",
+    description: "Free NodeJS Notes App.",
   };
+  res.render("index", locals);
+};
 
-  req.render("index", locals); //Renders index.ejs with "main" layout
+/**
+ * GET /
+ * About
+ */
+exports.about = async (req, res) => {
+  const locals = {
+    title: "About - NodeJs Notes",
+    description: "Free NodeJS Notes App.",
+  };
+  res.render("about", locals);
 };
